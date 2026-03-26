@@ -1,624 +1,625 @@
 # FIRST STEPS GUIDE
 
-Bienvenido a tu viaje en el desarrollo de software. Este repositorio ha sido cuidadosamente diseñado para guiarte a través de los fundamentos de la programación, desde la configuración de tu entorno de trabajo hasta la creación de proyectos completos, pasando por el control de versiones con Git.
+Welcome to your journey in software development. This repository has been carefully designed to guide you through the fundamentals of programming — from setting up your work environment to building complete projects, including version control with Git.
 
 ---
 
-> ⚠️ **Nota Importante**
+> ⚠️ **Important Note**
 >
-> Para un aprendizaje efectivo: Te recomendamos encarecidamente completar todas las actividades iniciales (hasta los proyectos finales) **sin el uso de herramientas de Inteligencia Artificial**. El objetivo es que desarrolles una comprensión profunda de los conceptos básicos y la capacidad de resolver problemas por ti mismo. La IA es una herramienta fantástica para después, no para saltarse el proceso de aprendizaje.
+> For effective learning: We strongly recommend completing all the initial activities (up through the final projects) **without the use of Artificial Intelligence tools**. The goal is for you to develop a deep understanding of core concepts and the ability to solve problems on your own. AI is a fantastic tool for later — not for skipping the learning process.
 
 ---
 
-## ÍNDICE
+## TABLE OF CONTENTS
 
-1. [Configuración del Entorno de Desarrollo](#configuración-del-entorno-de-desarrollo)
-2. [Control de Versiones con Git](#control-de-versiones-con-git)
-3. [Fundamentos de Programación](#fundamentos-de-programación)
-4. [Ejercicios por Lenguaje](#ejercicios-por-lenguaje)
-5. [Proyectos Finales](#proyectos-finales)
-6. [Soluciones](#soluciones-a-los-primeros-ejercicios)
-7. [Próximos Pasos](#próximos-pasos)
+1. [Development Environment Setup](#development-environment-setup)
+2. [Version Control with Git](#version-control-with-git)
+3. [Programming Fundamentals](#programming-fundamentals)
+4. [Exercises by Language](#exercises-by-language)
+5. [Final Projects](#final-projects)
+6. [Solutions](#solutions-to-the-first-exercises)
+7. [Next Steps](#next-steps)
 
 ---
 
-## CONFIGURACIÓN DEL ENTORNO DE DESARROLLO
+## DEVELOPMENT ENVIRONMENT SETUP
 
-Un buen entorno de trabajo es la base de un buen programador. Sigue estos pasos para tener todo listo.
+A good work environment is the foundation of a good programmer. Follow these steps to get everything ready.
 
-### Instalaciones Esenciales
+### Essential Installations
 
 #### Visual Studio Code (VS Code)
-Editor de código fuente. Es ligero, gratuito y altamente extensible. Descárgalo desde [code.visualstudio.com](https://code.visualstudio.com).
+Source code editor. Lightweight, free, and highly extensible. Download it from [code.visualstudio.com](https://code.visualstudio.com).
 
 #### Git
-Sistema de control de versiones. Imprescindible para gestionar tu código y colaborar. Descárgalo desde [git-scm.com](https://git-scm.com). Durante la instalación, puedes aceptar todas las opciones por defecto.
+Version control system. Essential for managing your code and collaborating. Download it from [git-scm.com](https://git-scm.com). During installation, you can accept all default options.
 
-#### Node.js *(Opcional pero recomendado)*
-Necesario para ejecutar entornos de desarrollo modernos y algunas extensiones como Live Server. Descárgalo desde [nodejs.org](https://nodejs.org) (versión LTS).
+#### Node.js *(Optional but recommended)*
+Required for running modern development environments and some extensions like Live Server. Download it from [nodejs.org](https://nodejs.org) (LTS version).
 
-### Extensiones Recomendadas para VS Code
+### Recommended VS Code Extensions
 
-Una vez instalado VS Code, accede al panel de extensiones (`Ctrl+Shift+X`) e instala las siguientes:
+Once VS Code is installed, open the extensions panel (`Ctrl+Shift+X`) and install the following:
 
-| Extensión | Propósito |
+| Extension | Purpose |
 |---|---|
-| Spanish Language Pack | Traduce la interfaz de VS Code al español. |
-| Prettier - Code formatter | Formatea automáticamente tu código al guardar, manteniendo un estilo consistente. |
-| Live Server | Lanza un servidor local con recarga en vivo para desarrollo web. |
-| Better Comments | Colorea y categoriza tus comentarios (`TODO`, `!`, `?`, `*`). |
-| Error Lens | Muestra errores y advertencias directamente junto a la línea de código. |
-| Postman | Permite probar APIs directamente desde VS Code. |
-| vscode-icons | Asigna iconos visuales a los diferentes tipos de archivo. |
+| Spanish Language Pack | Translates the VS Code interface into Spanish. |
+| Prettier - Code formatter | Automatically formats your code on save, maintaining a consistent style. |
+| Live Server | Launches a local server with live reloading for web development. |
+| Better Comments | Colors and categorizes your comments (`TODO`, `!`, `?`, `*`). |
+| Error Lens | Displays errors and warnings directly next to the line of code. |
+| Postman | Allows you to test APIs directly from VS Code. |
+| vscode-icons | Assigns visual icons to different file types. |
 
-> **Configuración recomendada:** Para que Prettier formatee al guardar, en configuración, busca **"format on save"** y actívalo. Luego, establece Prettier como formateador por defecto.
+> **Recommended setup:** To have Prettier format on save, go to settings, search for **"format on save"** and enable it. Then set Prettier as the default formatter.
 
 ---
 
-## CONTROL DE VERSIONES CON GIT
+## VERSION CONTROL WITH GIT
 
-Git te permite guardar "fotos" de tu proyecto en el tiempo, experimentar sin miedo y colaborar con otros. Este es el flujo de trabajo básico que usarás a diario.
+Git lets you save "snapshots" of your project over time, experiment without fear, and collaborate with others. This is the basic workflow you'll use every day.
 
-### Verificar Instalación
+### Verify Installation
 
-Abre una terminal (en VS Code: `Terminal > Nueva Terminal`) y ejecuta:
+Open a terminal (in VS Code: `Terminal > New Terminal`) and run:
 
 ```bash
 git --version
 ```
 
-Si ves un número de versión, estás listo. Si no, revisa la instalación.
+If you see a version number, you're good to go. If not, check your installation.
 
-### Clonar este Repositorio
+### Clone this Repository
 
-Para obtener una copia local de este proyecto en tu ordenador:
+To get a local copy of this project on your computer:
 
 ```bash
 git clone https://github.com/ggrauggas/FIRST-STEPS-GUIDE
 ```
 
-Si quieres acceder a cada `[URL-DEL-REPOSITORIO]` la dirección se encuentra en el botón **"Code"** de la página del repositorio en GitHub.
+If you want to access each `[REPOSITORY-URL]`, the address can be found in the **"Code"** button on the repository's GitHub page.
 
-### Gestión de Ramas (Branches)
+### Branch Management
 
-Las ramas son líneas de desarrollo independientes. La rama principal suele llamarse `main` o `master`. Para tus ejercicios, crearás tu propia rama.
+Branches are independent lines of development. The main branch is usually called `main` or `master`. For your exercises, you'll create your own branch.
 
-**Crear una nueva rama y cambiarte a ella:**
-
-```bash
-git checkout -b mi-rama-ejercicios
-```
-
-**Cambiar entre ramas existentes:**
+**Create a new branch and switch to it:**
 
 ```bash
-git checkout rama-que-quieres-cambiar
+git checkout -b my-exercises-branch
 ```
 
-### Flujo de Trabajo Diario: Añadir, Confirmar y Subir
+**Switch between existing branches:**
 
-**1. Ver el estado de tus cambios:**
+```bash
+git checkout branch-you-want-to-switch-to
+```
+
+### Daily Workflow: Add, Commit, and Push
+
+**1. Check the status of your changes:**
 
 ```bash
 git status
 ```
 
-Este comando te muestra qué archivos han sido modificados o añadidos.
+This command shows you which files have been modified or added.
 
-**2. Añadir cambios al área de preparación (staging area):**
+**2. Add changes to the staging area:**
 
-Para añadir un archivo específico:
+To add a specific file:
 
 ```bash
-git add nombre-del-archivo.py
+git add filename.py
 ```
 
-Para añadir todos los archivos modificados:
+To add all modified files:
 
 ```bash
 git add .
 ```
 
-**3. Confirmar los cambios con un mensaje:**
+**3. Commit the changes with a message:**
 
 ```bash
-git commit -m "Descripción clara y concisa de lo que has hecho"
+git commit -m "Clear and concise description of what you did"
 ```
 
-> Ejemplo: `git commit -m "Añade solución del ejercicio de la clase Persona en Python"`
+> Example: `git commit -m "Adds solution for the Persona class exercise in Python"`
 
-**4. Subir los cambios al repositorio remoto (GitHub):**
+**4. Push the changes to the remote repository (GitHub):**
 
 ```bash
-git push origin mi-rama-ejercicios
+git push origin my-exercises-branch
 ```
 
-> Si es la primera vez que subes esta rama, Git puede pedirte que configures la rama upstream con el comando que te sugiere.
-
----
-# FUNDAMENTOS DE LA PROGRAMACIÓN
-
-Antes de escribir una sola línea de código en Python o Java, estos son los conceptos universales que debes dominar. Piensa en ellos como los ladrillos con los que construirás cualquier programa.
+> If this is the first time you're pushing this branch, Git may ask you to set the upstream branch with the command it suggests.
 
 ---
 
-## Tipos de Datos
+# PROGRAMMING FUNDAMENTALS
 
-Los datos que maneja un programa pueden ser de diferentes tipos.
+Before writing a single line of code in Python or Java, these are the universal concepts you must master. Think of them as the building blocks you'll use to construct any program.
 
-| Tipo | Descripción | Ejemplo en Python | Ejemplo en Java |
+---
+
+## Data Types
+
+The data a program handles can be of different types.
+
+| Type | Description | Python Example | Java Example |
 |---|---|---|---|
-| **String** (cadena) | Texto, cualquier secuencia de caracteres. | `nombre = "Ana"` | `String nombre = "Ana";` |
-| **Integer** (entero) | Números sin decimales. | `edad = 30` | `int edad = 30;` |
-| **Float** (decimal) | Números con punto decimal. | `altura = 1.75` | `double altura = 1.75;` |
-| **Boolean** (booleano) | Valor verdadero o falso. | `es_mayor = True` | `boolean esMayor = true;` |
+| **String** | Text, any sequence of characters. | `name = "Ana"` | `String name = "Ana";` |
+| **Integer** | Numbers without decimals. | `age = 30` | `int age = 30;` |
+| **Float** | Numbers with a decimal point. | `height = 1.75` | `double height = 1.75;` |
+| **Boolean** | True or false value. | `is_adult = True` | `boolean isAdult = true;` |
 
 ---
 
-## Estructuras de Control
+## Control Structures
 
-Permiten dirigir el flujo de ejecución del programa.
+These direct the flow of execution in a program.
 
-### Condicional `if/else`
+### `if/else` Conditional
 
-Ejecuta un bloque de código solo si se cumple una condición.
+Executes a block of code only if a condition is met.
 
 ```python
 # Python
-edad = 18
-if edad >= 18:
-    print("Eres mayor de edad")
+age = 18
+if age >= 18:
+    print("You are an adult")
 else:
-    print("Eres menor de edad")
+    print("You are a minor")
 ```
 
 ```java
 // Java
-int edad = 18;
-if (edad >= 18) {
-    System.out.println("Eres mayor de edad");
+int age = 18;
+if (age >= 18) {
+    System.out.println("You are an adult");
 } else {
-    System.out.println("Eres menor de edad");
+    System.out.println("You are a minor");
 }
 ```
 
-### Bucle `for`
+### `for` Loop
 
-Repite un bloque de código un número determinado de veces.
+Repeats a block of code a set number of times.
 
 ```python
-# Python - Imprime los números del 0 al 4
+# Python - Prints numbers 0 through 4
 for i in range(5):
     print(i)
 ```
 
 ```java
-// Java - Imprime los números del 0 al 4
+// Java - Prints numbers 0 through 4
 for (int i = 0; i < 5; i++) {
     System.out.println(i);
 }
 ```
 
-### Bucle `while`
+### `while` Loop
 
-Repite un bloque de código mientras se cumpla una condición.
+Repeats a block of code while a condition is true.
 
 ```python
 # Python
-contador = 0
-while contador < 5:
-    print(contador)
-    contador += 1
+counter = 0
+while counter < 5:
+    print(counter)
+    counter += 1
 ```
 
 ```java
 // Java
-int contador = 0;
-while (contador < 5) {
-    System.out.println(contador);
-    contador++;
+int counter = 0;
+while (counter < 5) {
+    System.out.println(counter);
+    counter++;
 }
 ```
 
 ---
 
-## Modularidad: Funciones y Métodos
+## Modularity: Functions and Methods
 
-Las funciones permiten agrupar un bloque de código que realiza una tarea específica, para poder reutilizarlo.
+Functions allow you to group a block of code that performs a specific task, so it can be reused.
 
 ```python
-# Python - Definir y llamar una función
-def saludar(nombre):
-    return f"Hola, {nombre}"
+# Python - Define and call a function
+def greet(name):
+    return f"Hello, {name}"
 
-mensaje = saludar("Carlos")
-print(mensaje)  # Salida: Hola, Carlos
+message = greet("Carlos")
+print(message)  # Output: Hello, Carlos
 ```
 
 ```java
-// Java - Definir y llamar un método
-public class Utilidades {
-    public static String saludar(String nombre) {
-        return "Hola, " + nombre;
+// Java - Define and call a method
+public class Utilities {
+    public static String greet(String name) {
+        return "Hello, " + name;
     }
 
     public static void main(String[] args) {
-        String mensaje = saludar("Carlos");
-        System.out.println(mensaje);  // Salida: Hola, Carlos
+        String message = greet("Carlos");
+        System.out.println(message);  // Output: Hello, Carlos
     }
 }
 ```
 
 ---
 
-## Programación Orientada a Objetos (POO)
+## Object-Oriented Programming (OOP)
 
-La POO es un paradigma que organiza el código en "objetos" que contienen datos (**atributos**) y comportamientos (**métodos**).
+OOP is a paradigm that organizes code into "objects" containing data (**attributes**) and behaviors (**methods**).
 
-- **Clase:** Es el molde o plantilla. Define cómo será un objeto.
-- **Objeto:** Es una instancia concreta creada a partir de una clase.
+- **Class:** The mold or template. It defines what an object will look like.
+- **Object:** A concrete instance created from a class.
 
 ```python
-# Python - Definición de una clase
-class Perro:
-    # Constructor: se llama al crear un objeto
-    def __init__(self, nombre, raza):
-        self.nombre = nombre
-        self.raza = raza
+# Python - Class definition
+class Dog:
+    # Constructor: called when creating an object
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
 
-    # Método (comportamiento)
-    def ladrar(self):
-        return f"{self.nombre} dice: ¡Guau!"
+    # Method (behavior)
+    def bark(self):
+        return f"{self.name} says: Woof!"
 
-# Crear objetos (instancias)
-perro_1 = Perro("Inka", "Border Collie")
-perro_2 = Perro("Fosca", "Beagle")
+# Create objects (instances)
+dog_1 = Dog("Rex", "Border Collie")
+dog_2 = Dog("Buddy", "Beagle")
 
-print(perro_1.ladrar())   # Salida: Inka dice: ¡Guau!
-print(perro_2.nombre)     # Salida: Fosca
+print(dog_1.bark())     # Output: Rex says: Woof!
+print(dog_2.name)       # Output: Buddy
 ```
 
 ```java
-// Java - Definición de una clase
-public class Perro {
-    // Atributos (propiedades)
-    private String nombre;
-    private String raza;
+// Java - Class definition
+public class Dog {
+    // Attributes (properties)
+    private String name;
+    private String breed;
 
     // Constructor
-    public Perro(String nombre, String raza) {
-        this.nombre = nombre;
-        this.raza = raza;
+    public Dog(String name, String breed) {
+        this.name = name;
+        this.breed = breed;
     }
 
-    // Método (comportamiento)
-    public String ladrar() {
-        return this.nombre + " dice: ¡Guau!";
+    // Method (behavior)
+    public String bark() {
+        return this.name + " says: Woof!";
     }
 
-    // Getter para acceder al atributo privado
-    public String getNombre() {
-        return this.nombre;
+    // Getter to access the private attribute
+    public String getName() {
+        return this.name;
     }
 
     public static void main(String[] args) {
-        Perro miPerro = new Perro("Inka", "Border Collie");
-        Perro otroPerro = new Perro("Fosca", "Beagle");
+        Dog myDog = new Dog("Rex", "Border Collie");
+        Dog anotherDog = new Dog("Buddy", "Beagle");
 
-        System.out.println(miPerro.ladrar());
-        System.out.println(otroPerro.getNombre());
+        System.out.println(myDog.bark());
+        System.out.println(anotherDog.getName());
     }
 }
 ```
 
 ---
 
-## Arrays, Listas y Matrices
+## Arrays, Lists, and Matrices
 
-Las colecciones permiten almacenar múltiples valores en una sola variable.
+Collections allow you to store multiple values in a single variable.
 
-### Arrays (arreglos de tamaño fijo)
+### Arrays (fixed-size)
 
-En Java los arrays tienen un tamaño fijo que se define al crearlos. En Python no existe un array nativo equivalente: se usan listas (ver siguiente sección).
+In Java, arrays have a fixed size defined at creation. Python has no native equivalent — lists are used instead (see next section).
 
 ```python
-# Python - No hay array fijo nativo; se puede simular con la librería array
+# Python - No native fixed array; can simulate with the array module
 import array
-numeros = array.array('i', [10, 20, 30, 40, 50])
-print(numeros[0])   # Salida: 10
-print(len(numeros)) # Salida: 5
+numbers = array.array('i', [10, 20, 30, 40, 50])
+print(numbers[0])   # Output: 10
+print(len(numbers)) # Output: 5
 ```
 
 ```java
-// Java - Array de tamaño fijo
-int[] numeros = {10, 20, 30, 40, 50};
-System.out.println(numeros[0]);        // Salida: 10
-System.out.println(numeros.length);    // Salida: 5
+// Java - Fixed-size array
+int[] numbers = {10, 20, 30, 40, 50};
+System.out.println(numbers[0]);        // Output: 10
+System.out.println(numbers.length);    // Output: 5
 
-// Declarar primero, rellenar después
-String[] colores = new String[3];
-colores[0] = "rojo";
-colores[1] = "verde";
-colores[2] = "azul";
+// Declare first, fill later
+String[] colors = new String[3];
+colors[0] = "red";
+colors[1] = "green";
+colors[2] = "blue";
 ```
 
-### Listas (tamaño dinámico)
+### Lists (dynamic size)
 
-Las listas pueden crecer o decrecer en tiempo de ejecución.
+Lists can grow or shrink at runtime.
 
 ```python
-# Python - List (la estructura más usada)
-frutas = ["manzana", "banana", "naranja"]
+# Python - List (the most commonly used structure)
+fruits = ["apple", "banana", "orange"]
 
-# Agregar elementos
-frutas.append("uva")          # Al final: ["manzana", "banana", "naranja", "uva"]
-frutas.insert(1, "kiwi")      # En posición: ["manzana", "kiwi", "banana", "naranja", "uva"]
+# Add elements
+fruits.append("grape")           # To the end: ["apple", "banana", "orange", "grape"]
+fruits.insert(1, "kiwi")         # At position: ["apple", "kiwi", "banana", "orange", "grape"]
 
-# Eliminar elementos
-frutas.remove("banana")       # Por valor
-frutas.pop()                  # Elimina el último
-frutas.pop(0)                 # Elimina por índice
+# Remove elements
+fruits.remove("banana")          # By value
+fruits.pop()                     # Removes the last one
+fruits.pop(0)                    # Removes by index
 
-# Acceder y recorrer
-print(frutas[0])              # Primer elemento
-print(frutas[-1])             # Último elemento (atajo de Python)
-print(frutas[1:3])            # Slice: elementos del índice 1 al 2
+# Access and iterate
+print(fruits[0])                 # First element
+print(fruits[-1])                # Last element (Python shortcut)
+print(fruits[1:3])               # Slice: elements at index 1 and 2
 
-for fruta in frutas:
-    print(fruta)
+for fruit in fruits:
+    print(fruit)
 ```
 
 ```java
-// Java - ArrayList (tamaño dinámico, equivalente a la lista de Python)
+// Java - ArrayList (dynamic size, equivalent to Python list)
 import java.util.ArrayList;
 
-ArrayList<String> frutas = new ArrayList<>();
+ArrayList<String> fruits = new ArrayList<>();
 
-// Agregar elementos
-frutas.add("manzana");
-frutas.add("banana");
-frutas.add("naranja");
-frutas.add(1, "kiwi");        // Insertar en posición específica
+// Add elements
+fruits.add("apple");
+fruits.add("banana");
+fruits.add("orange");
+fruits.add(1, "kiwi");           // Insert at specific position
 
-// Eliminar elementos
-frutas.remove("banana");      // Por valor
-frutas.remove(0);             // Por índice
+// Remove elements
+fruits.remove("banana");         // By value
+fruits.remove(0);                // By index
 
-// Acceder y recorrer
-System.out.println(frutas.get(0));       // Primer elemento
-System.out.println(frutas.size());       // Tamaño de la lista
+// Access and iterate
+System.out.println(fruits.get(0));       // First element
+System.out.println(fruits.size());       // List size
 
-for (String fruta : frutas) {
-    System.out.println(fruta);
+for (String fruit : fruits) {
+    System.out.println(fruit);
 }
 ```
 
-### Atajos y operaciones frecuentes con listas
+### Useful shortcuts and common list operations
 
 ```python
-# Python - Atajos útiles
+# Python - Useful shortcuts
 
-numeros = [3, 1, 4, 1, 5, 9, 2, 6]
+numbers = [3, 1, 4, 1, 5, 9, 2, 6]
 
-# Ordenar
-numeros.sort()                        # Ordena en el lugar: [1, 1, 2, 3, 4, 5, 6, 9]
-ordenado = sorted(numeros)            # Devuelve nueva lista ordenada
-numeros.sort(reverse=True)            # Orden descendente
+# Sort
+numbers.sort()                        # In-place sort: [1, 1, 2, 3, 4, 5, 6, 9]
+sorted_list = sorted(numbers)         # Returns a new sorted list
+numbers.sort(reverse=True)            # Descending order
 
-# Buscar
-print(3 in numeros)                   # True/False → comprobar si existe
-print(numeros.index(4))               # Índice del primer 4
-print(numeros.count(1))               # Cuántas veces aparece el 1
+# Search
+print(3 in numbers)                   # True/False → check if exists
+print(numbers.index(4))               # Index of first 4
+print(numbers.count(1))               # How many times 1 appears
 
-# Estadísticas rápidas
-print(min(numeros))                   # Valor mínimo
-print(max(numeros))                   # Valor máximo
-print(sum(numeros))                   # Suma total
-print(len(numeros))                   # Número de elementos
+# Quick stats
+print(min(numbers))                   # Minimum value
+print(max(numbers))                   # Maximum value
+print(sum(numbers))                   # Total sum
+print(len(numbers))                   # Number of elements
 
-# List comprehension (crear listas en una línea)
-cuadrados = [x**2 for x in range(1, 6)]     # [1, 4, 9, 16, 25]
-pares = [x for x in numeros if x % 2 == 0]  # Solo los pares
+# List comprehension (create lists in one line)
+squares = [x**2 for x in range(1, 6)]      # [1, 4, 9, 16, 25]
+evens = [x for x in numbers if x % 2 == 0] # Only even numbers
 
-# Copiar una lista (no usar lista2 = lista1, eso no copia)
-copia = numeros.copy()
-copia = numeros[:]                    # Alternativa con slice
+# Copy a list (don't use list2 = list1 — that doesn't copy)
+copy = numbers.copy()
+copy = numbers[:]                     # Alternative with slice
 
-# Combinar listas
+# Combine lists
 a = [1, 2, 3]
 b = [4, 5, 6]
 c = a + b                             # [1, 2, 3, 4, 5, 6]
-a.extend(b)                           # Agrega b al final de a
+a.extend(b)                           # Appends b to the end of a
 ```
 
 ```java
-// Java - Atajos útiles con ArrayList y Arrays
+// Java - Useful shortcuts with ArrayList and Arrays
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-ArrayList<Integer> numeros = new ArrayList<>(Arrays.asList(3, 1, 4, 1, 5, 9, 2, 6));
+ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(3, 1, 4, 1, 5, 9, 2, 6));
 
-// Ordenar
-Collections.sort(numeros);                        // Orden ascendente
-Collections.sort(numeros, Collections.reverseOrder()); // Orden descendente
+// Sort
+Collections.sort(numbers);                        // Ascending order
+Collections.sort(numbers, Collections.reverseOrder()); // Descending order
 
-// Buscar
-System.out.println(numeros.contains(3));          // true/false
-System.out.println(numeros.indexOf(4));           // Índice del primer 4
-System.out.println(Collections.frequency(numeros, 1)); // Cuántas veces aparece 1
+// Search
+System.out.println(numbers.contains(3));          // true/false
+System.out.println(numbers.indexOf(4));           // Index of first 4
+System.out.println(Collections.frequency(numbers, 1)); // How many times 1 appears
 
-// Estadísticas
-System.out.println(Collections.min(numeros));     // Valor mínimo
-System.out.println(Collections.max(numeros));     // Valor máximo
+// Stats
+System.out.println(Collections.min(numbers));     // Minimum value
+System.out.println(Collections.max(numbers));     // Maximum value
 
-// Copiar
-ArrayList<Integer> copia = new ArrayList<>(numeros);
+// Copy
+ArrayList<Integer> copy = new ArrayList<>(numbers);
 
-// Combinar listas
+// Combine lists
 ArrayList<Integer> a = new ArrayList<>(Arrays.asList(1, 2, 3));
 ArrayList<Integer> b = new ArrayList<>(Arrays.asList(4, 5, 6));
-a.addAll(b);  // Agrega b al final de a
+a.addAll(b);  // Appends b to the end of a
 ```
 
-### Matrices (listas de listas / arrays 2D)
+### Matrices (lists of lists / 2D arrays)
 
-Una matriz es una tabla de filas y columnas. Se implementa como una lista de listas.
+A matrix is a table of rows and columns. It is implemented as a list of lists.
 
 ```python
-# Python - Matriz 3x3
-matriz = [
+# Python - 3x3 matrix
+matrix = [
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]
 ]
 
-# Acceder a un elemento: matriz[fila][columna]
-print(matriz[0][0])   # Salida: 1  → fila 0, columna 0
-print(matriz[1][2])   # Salida: 6  → fila 1, columna 2
+# Access an element: matrix[row][column]
+print(matrix[0][0])   # Output: 1  → row 0, column 0
+print(matrix[1][2])   # Output: 6  → row 1, column 2
 
-# Recorrer toda la matriz
-for fila in matriz:
-    for elemento in fila:
-        print(elemento, end=" ")
-    print()  # Salto de línea al terminar cada fila
+# Iterate through the entire matrix
+for row in matrix:
+    for element in row:
+        print(element, end=" ")
+    print()  # New line after each row
 
-# Crear una matriz vacía de 3x3 con ceros
-filas, columnas = 3, 3
-vacia = [[0] * columnas for _ in range(filas)]
+# Create an empty 3x3 matrix filled with zeros
+rows, cols = 3, 3
+empty = [[0] * cols for _ in range(rows)]
 ```
 
 ```java
-// Java - Matriz 3x3 (array 2D)
-int[][] matriz = {
+// Java - 3x3 matrix (2D array)
+int[][] matrix = {
     {1, 2, 3},
     {4, 5, 6},
     {7, 8, 9}
 };
 
-// Acceder a un elemento: matriz[fila][columna]
-System.out.println(matriz[0][0]);   // Salida: 1
-System.out.println(matriz[1][2]);   // Salida: 6
+// Access an element: matrix[row][column]
+System.out.println(matrix[0][0]);   // Output: 1
+System.out.println(matrix[1][2]);   // Output: 6
 
-// Recorrer toda la matriz
-for (int i = 0; i < matriz.length; i++) {
-    for (int j = 0; j < matriz[i].length; j++) {
-        System.out.print(matriz[i][j] + " ");
+// Iterate through the entire matrix
+for (int i = 0; i < matrix.length; i++) {
+    for (int j = 0; j < matrix[i].length; j++) {
+        System.out.print(matrix[i][j] + " ");
     }
-    System.out.println();  // Salto de línea al terminar cada fila
+    System.out.println();  // New line after each row
 }
 
-// Crear una matriz vacía de 3x3 con ceros
-int[][] vacia = new int[3][3];  // Java la inicializa a 0 automáticamente
+// Create an empty 3x3 matrix filled with zeros
+int[][] empty = new int[3][3];  // Java initializes to 0 automatically
 ```
 
-### Comparativa rápida: ¿cuándo usar cada estructura?
+### Quick comparison: when to use each structure?
 
-| Estructura | Python | Java | Cuándo usarla |
+| Structure | Python | Java | When to use it |
 |---|---|---|---|
-| **Array fijo** | `array.array` | `int[]` | Tamaño conocido, rendimiento máximo |
-| **Lista dinámica** | `list` | `ArrayList` | Tamaño variable, uso general |
-| **Matriz 2D** | `list` de `list` | `int[][]` | Tablas, cuadrículas, imágenes |
+| **Fixed array** | `array.array` | `int[]` | Known size, maximum performance |
+| **Dynamic list** | `list` | `ArrayList` | Variable size, general use |
+| **2D matrix** | `list` of `list` | `int[][]` | Tables, grids, images |
 
 ---
 
-## EJERCICIOS POR LENGUAJE
+## EXERCISES BY LANGUAGE
 
-A continuación se detallan los ejercicios que debes realizar para cada tecnología. Se recomienda hacerlos en orden.
+Below are the exercises you need to complete for each technology. It is recommended to do them in order.
 
 ### 🐍 PYTHON
 
-Python es ideal para principiantes por su sintaxis clara y legible. Se ejecuta con:
+Python is ideal for beginners due to its clear and readable syntax. Run files with:
 
 ```bash
-python nombre_archivo.py
+python filename.py
 ```
 
-| # | Ejercicio | Descripción | Conceptos Clave |
+| # | Exercise | Description | Key Concepts |
 |---|---|---|---|
-| 1 | **Hola Mundo** | Imprime el texto `"Hola, mundo!"` en la consola. | `print()` |
-| 2 | **Operaciones Matemáticas** | Declara dos variables numéricas y muestra el resultado de su suma, resta, multiplicación y división. | Variables, tipos de datos, operadores aritméticos. |
-| 3 | **Entrada de Usuario y Condicional** | Solicita al usuario su edad mediante `input()` y muestra si es mayor de edad (>= 18) o no. | `input()`, conversión de tipos (`int()`), condicional `if/else`. |
-| 4 | **Validación con Bucle** | Solicita al usuario que introduzca el número 5. Si introduce otro, sigue pidiéndolo. Al final, muestra `"¡Correcto!"`. | Bucle `while`, condicionales. |
-| 5 | **Programación Orientada a Objetos** | Crea una clase `Persona` con atributos `nombre`, `edad`, `peso` y `altura`. Incluye un método `mostrar_informacion()`. Crea dos objetos y muestra su información. | Clases, constructor `__init__`, métodos, `self`. |
+| 1 | **Hello World** | Print the text `"Hello, world!"` to the console. | `print()` |
+| 2 | **Math Operations** | Declare two numeric variables and display the result of their sum, subtraction, multiplication, and division. | Variables, data types, arithmetic operators. |
+| 3 | **User Input and Conditional** | Ask the user for their age using `input()` and display whether they are an adult (>= 18) or not. | `input()`, type conversion (`int()`), `if/else` conditional. |
+| 4 | **Loop Validation** | Ask the user to enter the number 5. If they enter something else, keep asking. At the end, display `"Correct!"`. | `while` loop, conditionals. |
+| 5 | **Object-Oriented Programming** | Create a `Person` class with attributes `name`, `age`, `weight`, and `height`. Include a `show_info()` method. Create two objects and display their information. | Classes, `__init__` constructor, methods, `self`. |
 
 ### ☕ JAVA
 
-Java es un lenguaje de tipado fuerte y compilado. Necesitarás instalar el **JDK** (Java Development Kit). Para compilar y ejecutar:
+Java is a strongly typed, compiled language. You'll need to install the **JDK** (Java Development Kit). To compile and run:
 
 ```bash
-javac NombreArchivo.java   # Compila
-java NombreArchivo         # Ejecuta
+javac FileName.java   # Compile
+java FileName         # Run
 ```
 
-| # | Ejercicio | Descripción | Conceptos Clave |
+| # | Exercise | Description | Key Concepts |
 |---|---|---|---|
-| 1 | **Hola Mundo** | Crea una clase con un método `main` que imprima `"Hola, mundo!"`. | Estructura de una clase, método `main`, `System.out.println()`. |
-| 2 | **Scanner y Entrada** | Usa la clase `Scanner` para solicitar nombre y edad al usuario, luego imprimirlos. | `java.util.Scanner`, `nextLine()`, `nextInt()`. |
-| 3 | **Lógica Condicional** | Pide al usuario su edad y determina si es mayor de edad con `if-else`. | `if-else`, operadores de comparación. |
-| 4 | **Programación Orientada a Objetos** | Crea una clase `Persona` con atributos privados, constructor, getters y setters. En el `main`, crea una persona y muestra sus datos. | `private`, `public`, encapsulación, getters/setters. |
+| 1 | **Hello World** | Create a class with a `main` method that prints `"Hello, world!"`. | Class structure, `main` method, `System.out.println()`. |
+| 2 | **Scanner and Input** | Use the `Scanner` class to ask the user for their name and age, then print them. | `java.util.Scanner`, `nextLine()`, `nextInt()`. |
+| 3 | **Conditional Logic** | Ask the user for their age and determine whether they are an adult with `if-else`. | `if-else`, comparison operators. |
+| 4 | **Object-Oriented Programming** | Create a `Person` class with private attributes, a constructor, getters, and setters. In `main`, create a person and display their data. | `private`, `public`, encapsulation, getters/setters. |
 
-### 🌐 HTML y CSS
+### 🌐 HTML AND CSS
 
-Estas tecnologías definen la estructura y el estilo de las páginas web. No requieren compilación, solo abrir el archivo `.html` en un navegador.
+These technologies define the structure and style of web pages. No compilation needed — just open the `.html` file in a browser.
 
-| # | Ejercicio | Descripción | Conceptos Clave |
+| # | Exercise | Description | Key Concepts |
 |---|---|---|---|
-| 1 | **Estructura Básica** | Crea un documento HTML con un título `h1`, un párrafo `p` y una división `div` con texto. | `<!DOCTYPE html>`, `<html>`, `<head>`, `<body>`, `h1`, `p`, `div`. |
-| 2 | **Formulario** | Añade un formulario con campos para nombre y edad, y un botón de enviar. | `<form>`, `<input type="text">`, `<input type="number">`, `<button>`. |
-| 3 | **Estilos CSS** | Aplica estilos: primero en línea (`style`), luego con `<style>` en el `<head>`, y finalmente con un archivo `estilos.css` externo. | `color`, `background-color`, `margin`, `padding`, selectores CSS. |
+| 1 | **Basic Structure** | Create an HTML document with an `h1` heading, a `p` paragraph, and a `div` with text. | `<!DOCTYPE html>`, `<html>`, `<head>`, `<body>`, `h1`, `p`, `div`. |
+| 2 | **Form** | Add a form with fields for name and age, and a submit button. | `<form>`, `<input type="text">`, `<input type="number">`, `<button>`. |
+| 3 | **CSS Styles** | Apply styles: first inline (`style`), then with `<style>` in `<head>`, and finally with an external `styles.css` file. | `color`, `background-color`, `margin`, `padding`, CSS selectors. |
 
 ### 🟨 JAVASCRIPT
 
-JavaScript añade interactividad a las páginas web. Se ejecuta en el navegador.
+JavaScript adds interactivity to web pages. It runs in the browser.
 
-| # | Ejercicio | Descripción | Conceptos Clave |
+| # | Exercise | Description | Key Concepts |
 |---|---|---|---|
-| 1 | **Interactividad Básica** | Crea un botón que al hacer clic muestre una alerta con `"¡Botón clickeado!"`. | Evento `onclick`, función `alert()`. |
-| 2 | **Capturar y Mostrar Datos** | Escribe una función que capture los valores del formulario (nombre y edad) y los muestre en un párrafo, sin usar `alert()`. | `document.getElementById()`, `.value`, manipulación del DOM (`.innerText`). |
+| 1 | **Basic Interactivity** | Create a button that, when clicked, shows an alert with `"Button clicked!"`. | `onclick` event, `alert()` function. |
+| 2 | **Capture and Display Data** | Write a function that captures the form values (name and age) and displays them in a paragraph, without using `alert()`. | `document.getElementById()`, `.value`, DOM manipulation (`.innerText`). |
 
 ---
 
-## PROYECTOS FINALES
+## FINAL PROJECTS
 
-Estos proyectos integran todos los conocimientos adquiridos. Realízalos después de completar los ejercicios individuales.
+These projects integrate all the knowledge you've acquired. Complete them after finishing the individual exercises.
 
-### Calculadora Web [HTML, CSS, JAVASCRIPT]
+### Web Calculator [HTML, CSS, JAVASCRIPT]
 
-Desarrolla una calculadora funcional que pueda realizar las cuatro operaciones básicas: suma, resta, multiplicación y división.
+Build a functional calculator that can perform the four basic operations: addition, subtraction, multiplication, and division.
 
-**Estructura esperada:**
+**Expected structure:**
 
-- **HTML:** Una interfaz con dos campos `<input type="number">`, cuatro botones (`+`, `-`, `*`, `/`) y un área para mostrar el resultado.
-- **CSS:** Estilos para que sea visualmente agradable: botones grandes, colores diferenciados, centrado en la pantalla.
-- **JavaScript:** Lógica para capturar valores, realizar la operación, manejar la división entre cero y mostrar el resultado.
+- **HTML:** An interface with two `<input type="number">` fields, four buttons (`+`, `-`, `*`, `/`), and an area to display the result.
+- **CSS:** Styles to make it visually appealing: large buttons, differentiated colors, centered on screen.
+- **JavaScript:** Logic to capture values, perform the operation, handle division by zero, and display the result.
 
-**Ejemplo de código base (función suma):**
+**Base code example (sum function):**
 
 ```javascript
-function sumar() {
-    // Obtener los valores de los inputs y convertirlos a números
-    let numero1 = parseFloat(document.getElementById('num1').value);
-    let numero2 = parseFloat(document.getElementById('num2').value);
+function add() {
+    // Get values from inputs and convert them to numbers
+    let number1 = parseFloat(document.getElementById('num1').value);
+    let number2 = parseFloat(document.getElementById('num2').value);
     
-    // Realizar la suma
-    let resultado = numero1 + numero2;
+    // Perform the addition
+    let result = number1 + number2;
     
-    // Mostrar el resultado en el elemento con id="resultado"
-    document.getElementById('resultado').innerText = "Resultado: " + resultado;
+    // Display the result in the element with id="result"
+    document.getElementById('result').innerText = "Result: " + result;
 }
 ```
 
-### ❌⭕ TRES EN RAYA POR CONSOLA [PYTHON O JAVA]
+### ❌⭕ TIC-TAC-TOE IN THE CONSOLE [PYTHON OR JAVA]
 
-Implementa el clásico juego de Tres en Raya en modo texto a través de la consola. Puedes elegir **Python** o **Java**.
+Implement the classic Tic-Tac-Toe game in text mode through the console. You can choose **Python** or **Java**.
 
-**Lógica del juego:**
+**Game logic:**
 
-1. **Representar el tablero:** Usa una lista (Python) o un array (Java) de 3×3. Las posiciones vacías se representan con `" "`.
+1. **Represent the board:** Use a 3×3 list (Python) or array (Java). Empty positions are represented with `" "`.
 
-2. **Mostrar el tablero** de forma legible:
+2. **Display the board** in a readable way:
 
     ```
        |   | 
@@ -636,161 +637,161 @@ Implementa el clásico juego de Tres en Raya en modo texto a través de la conso
      O | X | X
     ```
 
-3. **Turnos:** Alterna entre el jugador `"X"` y el jugador `"O"`.
+3. **Turns:** Alternate between player `"X"` and player `"O"`.
 
-4. **Entrada del usuario:** Solicita las coordenadas del movimiento (fila y columna, de 0 a 2).
+4. **User input:** Ask for the move coordinates (row and column, from 0 to 2).
 
-5. **Validaciones:**
-   - La casilla elegida debe estar vacía.
-   - Las coordenadas deben estar dentro del rango válido.
+5. **Validations:**
+   - The chosen cell must be empty.
+   - Coordinates must be within the valid range.
 
-6. **Verificación del ganador:** Después de cada movimiento, comprueba si hay tres en línea (horizontal, vertical o diagonal). Si hay ganador, anúncialo y termina el juego.
+6. **Winner check:** After each move, check if there are three in a row (horizontal, vertical, or diagonal). If there's a winner, announce it and end the game.
 
-7. **Empate:** Si el tablero se llena sin ganador, anuncia el empate y termina el juego.
+7. **Draw:** If the board fills up with no winner, announce a draw and end the game.
 
 ---
 
-## SOLUCIONES PRIMEROS EJERCICIOS
+## SOLUTIONS TO THE FIRST EXERCISES
 
-> 💡 Intenta resolver los ejercicios por tu cuenta antes de consultar las soluciones.
+> 💡 Try to solve the exercises on your own before checking the solutions.
 
-### Soluciones en Python
+### Python Solutions
 
-#### Ejercicio 1: Hola Mundo
+#### Exercise 1: Hello World
 
 ```python
-# hola_mundo.py
-print("Hola, mundo!")
+# hello_world.py
+print("Hello, world!")
 ```
 
-#### Ejercicio 2: Operaciones Matemáticas
+#### Exercise 2: Math Operations
 
 ```python
-# operaciones.py
-numero1 = 10
-numero2 = 5
+# operations.py
+number1 = 10
+number2 = 5
 
-suma = numero1 + numero2
-resta = numero1 - numero2
-multiplicacion = numero1 * numero2
-division = numero1 / numero2
+sum_result = number1 + number2
+subtraction = number1 - number2
+multiplication = number1 * number2
+division = number1 / number2
 
-print("Suma:", suma)
-print("Resta:", resta)
-print("Multiplicación:", multiplicacion)
-print("División:", division)
+print("Sum:", sum_result)
+print("Subtraction:", subtraction)
+print("Multiplication:", multiplication)
+print("Division:", division)
 ```
 
-#### Ejercicio 3: Entrada de Usuario y Condicional
+#### Exercise 3: User Input and Conditional
 
 ```python
-# edad.py
-edad_str = input("Por favor, introduce tu edad: ")
-edad = int(edad_str)
+# age.py
+age_str = input("Please enter your age: ")
+age = int(age_str)
 
-if edad >= 18:
-    print("Eres mayor de edad.")
+if age >= 18:
+    print("You are an adult.")
 else:
-    print("Eres menor de edad.")
+    print("You are a minor.")
 ```
 
-#### Ejercicio 4: Validación con Bucle
+#### Exercise 4: Loop Validation
 
 ```python
-# validacion_numero.py
-numero_correcto = 5
-numero_usuario = None
+# number_validation.py
+correct_number = 5
+user_number = None
 
-while numero_usuario != numero_correcto:
-    numero_usuario_str = input("Introduce el número 5: ")
-    numero_usuario = int(numero_usuario_str)
+while user_number != correct_number:
+    user_number_str = input("Enter the number 5: ")
+    user_number = int(user_number_str)
     
-    if numero_usuario != numero_correcto:
-        print("Incorrecto. Inténtalo de nuevo.")
+    if user_number != correct_number:
+        print("Incorrect. Try again.")
 
-print("¡Correcto!")
+print("Correct!")
 ```
 
-#### Ejercicio 5: Programación Orientada a Objetos (Clase Persona)
+#### Exercise 5: Object-Oriented Programming (Person Class)
 
 ```python
-# persona.py
-class Persona:
-    def __init__(self, nombre, edad, peso, altura):
-        self.nombre = nombre
-        self.edad = edad
-        self.peso = peso      # en kilogramos
-        self.altura = altura  # en metros
+# person.py
+class Person:
+    def __init__(self, name, age, weight, height):
+        self.name = name
+        self.age = age
+        self.weight = weight    # in kilograms
+        self.height = height    # in meters
     
-    def mostrar_informacion(self):
-        print("--- Información de la persona ---")
-        print(f"Nombre: {self.nombre}")
-        print(f"Edad: {self.edad} años")
-        print(f"Peso: {self.peso} kg")
-        print(f"Altura: {self.altura} m")
-        print("---------------------------------")
+    def show_info(self):
+        print("--- Person Information ---")
+        print(f"Name: {self.name}")
+        print(f"Age: {self.age} years")
+        print(f"Weight: {self.weight} kg")
+        print(f"Height: {self.height} m")
+        print("--------------------------")
 
-# Crear objetos y mostrar su información
-persona1 = Persona("Ana García", 28, 60.5, 1.65)
-persona2 = Persona("Luis Pérez", 35, 82.0, 1.78)
+# Create objects and display their information
+person1 = Person("Ana Garcia", 28, 60.5, 1.65)
+person2 = Person("Luis Perez", 35, 82.0, 1.78)
 
-persona1.mostrar_informacion()
-persona2.mostrar_informacion()
+person1.show_info()
+person2.show_info()
 ```
 
-### Soluciones en Java
+### Java Solutions
 
-#### Ejercicio 1: Hola Mundo
+#### Exercise 1: Hello World
 
 ```java
-// HolaMundo.java
-public class HolaMundo {
+// HelloWorld.java
+public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hola, mundo!");
+        System.out.println("Hello, world!");
     }
 }
 ```
 
-#### Ejercicio 2: Scanner y Entrada
+#### Exercise 2: Scanner and Input
 
 ```java
-// EntradaUsuario.java
+// UserInput.java
 import java.util.Scanner;
 
-public class EntradaUsuario {
+public class UserInput {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        System.out.print("Introduce tu nombre: ");
-        String nombre = scanner.nextLine();
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
         
-        System.out.print("Introduce tu edad: ");
-        int edad = scanner.nextInt();
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
         
-        System.out.println("Hola " + nombre + ", tienes " + edad + " años.");
+        System.out.println("Hello " + name + ", you are " + age + " years old.");
         
         scanner.close();
     }
 }
 ```
 
-#### Ejercicio 3: Lógica Condicional (Mayoría de Edad)
+#### Exercise 3: Conditional Logic (Adult Check)
 
 ```java
-// MayorEdad.java
+// AdultCheck.java
 import java.util.Scanner;
 
-public class MayorEdad {
+public class AdultCheck {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        System.out.print("Introduce tu edad: ");
-        int edad = scanner.nextInt();
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
         
-        if (edad >= 18) {
-            System.out.println("Eres mayor de edad.");
+        if (age >= 18) {
+            System.out.println("You are an adult.");
         } else {
-            System.out.println("Eres menor de edad.");
+            System.out.println("You are a minor.");
         }
         
         scanner.close();
@@ -798,77 +799,77 @@ public class MayorEdad {
 }
 ```
 
-#### Ejercicio 4: Programación Orientada a Objetos (Clase Persona con Getter/Setter)
+#### Exercise 4: Object-Oriented Programming (Person Class with Getter/Setter)
 
 ```java
-// Persona.java
-public class Persona {
-    // Atributos privados (encapsulación)
-    private String nombre;
-    private int edad;
+// Person.java
+public class Person {
+    // Private attributes (encapsulation)
+    private String name;
+    private int age;
     
     // Constructor
-    public Persona(String nombre, int edad) {
-        this.nombre = nombre;
-        this.edad = edad;
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
     
-    // Getter para nombre
-    public String getNombre() {
-        return this.nombre;
+    // Getter for name
+    public String getName() {
+        return this.name;
     }
     
-    // Setter para nombre
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    // Setter for name
+    public void setName(String name) {
+        this.name = name;
     }
     
-    // Getter para edad
-    public int getEdad() {
-        return this.edad;
+    // Getter for age
+    public int getAge() {
+        return this.age;
     }
     
-    // Setter para edad
-    public void setEdad(int edad) {
-        if (edad >= 0) {
-            this.edad = edad;
+    // Setter for age
+    public void setAge(int age) {
+        if (age >= 0) {
+            this.age = age;
         } else {
-            System.out.println("Edad no válida");
+            System.out.println("Invalid age");
         }
     }
     
-    public void mostrarInformacion() {
-        System.out.println("Nombre: " + this.nombre);
-        System.out.println("Edad: " + this.edad);
+    public void showInfo() {
+        System.out.println("Name: " + this.name);
+        System.out.println("Age: " + this.age);
     }
     
     public static void main(String[] args) {
-        Persona persona = new Persona("Carlos", 25);
+        Person person = new Person("Carlos", 25);
         
-        System.out.println("--- Datos iniciales ---");
-        persona.mostrarInformacion();
+        System.out.println("--- Initial Data ---");
+        person.showInfo();
         
-        // Usar setters para modificar
-        persona.setNombre("Carlos López");
-        persona.setEdad(26);
+        // Use setters to modify
+        person.setName("Carlos Lopez");
+        person.setAge(26);
         
-        System.out.println("\n--- Datos modificados ---");
-        persona.mostrarInformacion();
+        System.out.println("\n--- Updated Data ---");
+        person.showInfo();
     }
 }
 ```
 
-### Soluciones en HTML, CSS y JavaScript
+### HTML, CSS, and JavaScript Solutions
 
-#### Ejercicios 1 y 2: Estructura, Formulario e Interactividad
+#### Exercises 1 and 2: Structure, Form, and Interactivity
 
 ```html
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Página Interactiva</title>
+    <title>My First Interactive Page</title>
     
     <style>
         body {
@@ -879,14 +880,14 @@ public class Persona {
             background-color: #f5f5f5;
         }
         h1 { color: #333; text-align: center; }
-        .formulario-container {
+        .form-container {
             background-color: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             margin-bottom: 20px;
         }
-        .campo { margin-bottom: 15px; }
+        .field { margin-bottom: 15px; }
         label { display: block; margin-bottom: 5px; font-weight: bold; }
         input[type="text"], input[type="number"] {
             width: 100%;
@@ -905,7 +906,7 @@ public class Persona {
             margin-right: 10px;
         }
         button:hover { background-color: #0056b3; }
-        .resultado {
+        .result {
             background-color: #e9ecef;
             padding: 15px;
             border-radius: 4px;
@@ -914,115 +915,115 @@ public class Persona {
     </style>
 </head>
 <body>
-    <h1>Formulario de Usuario</h1>
+    <h1>User Form</h1>
     
-    <div class="formulario-container">
-        <div class="campo">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" placeholder="Escribe tu nombre">
+    <div class="form-container">
+        <div class="field">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
         </div>
-        <div class="campo">
-            <label for="edad">Edad:</label>
-            <input type="number" id="edad" placeholder="Escribe tu edad">
+        <div class="field">
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="Enter your age">
         </div>
-        <button onclick="mostrarDatos()">Mostrar Datos</button>
-        <button onclick="mostrarAlerta()">Mostrar Alerta</button>
-        <div class="resultado" id="resultado">Los datos se mostrarán aquí...</div>
+        <button onclick="showData()">Show Data</button>
+        <button onclick="showAlert()">Show Alert</button>
+        <div class="result" id="result">Data will be shown here...</div>
     </div>
     
-    <div class="formulario-container">
-        <h3>Calculadora Simple</h3>
-        <div class="campo">
-            <label for="num1">Número 1:</label>
+    <div class="form-container">
+        <h3>Simple Calculator</h3>
+        <div class="field">
+            <label for="num1">Number 1:</label>
             <input type="number" id="num1">
         </div>
-        <div class="campo">
-            <label for="num2">Número 2:</label>
+        <div class="field">
+            <label for="num2">Number 2:</label>
             <input type="number" id="num2">
         </div>
-        <button onclick="operacion('suma')">+</button>
-        <button onclick="operacion('resta')">-</button>
-        <button onclick="operacion('multiplicacion')">*</button>
-        <button onclick="operacion('division')">/</button>
-        <div class="resultado" id="resultadoCalculadora">Resultado: </div>
+        <button onclick="operate('add')">+</button>
+        <button onclick="operate('subtract')">-</button>
+        <button onclick="operate('multiply')">*</button>
+        <button onclick="operate('divide')">/</button>
+        <div class="result" id="calculatorResult">Result: </div>
     </div>
     
     <script>
-        function mostrarDatos() {
-            let nombre = document.getElementById('nombre').value;
-            let edad = document.getElementById('edad').value;
-            let resultadoDiv = document.getElementById('resultado');
+        function showData() {
+            let name = document.getElementById('name').value;
+            let age = document.getElementById('age').value;
+            let resultDiv = document.getElementById('result');
             
-            if (nombre && edad) {
-                resultadoDiv.innerHTML = `
-                    <strong>Datos ingresados:</strong><br>
-                    Nombre: ${nombre}<br>
-                    Edad: ${edad} años<br>
-                    ${edad >= 18 ? 'Es mayor de edad' : 'Es menor de edad'}
+            if (name && age) {
+                resultDiv.innerHTML = `
+                    <strong>Entered data:</strong><br>
+                    Name: ${name}<br>
+                    Age: ${age} years old<br>
+                    ${age >= 18 ? 'Is an adult' : 'Is a minor'}
                 `;
             } else {
-                resultadoDiv.innerHTML = 'Por favor, completa todos los campos.';
+                resultDiv.innerHTML = 'Please fill in all fields.';
             }
         }
         
-        function mostrarAlerta() {
-            alert('¡Botón clickeado! Este es el mensaje de alerta.');
+        function showAlert() {
+            alert('Button clicked! This is the alert message.');
         }
         
-        function operacion(tipo) {
+        function operate(type) {
             let num1 = parseFloat(document.getElementById('num1').value);
             let num2 = parseFloat(document.getElementById('num2').value);
-            let resultado, operador;
+            let result, operator;
             
             if (isNaN(num1) || isNaN(num2)) {
-                document.getElementById('resultadoCalculadora').innerHTML =
-                    'Resultado: Por favor, introduce ambos números.';
+                document.getElementById('calculatorResult').innerHTML =
+                    'Result: Please enter both numbers.';
                 return;
             }
             
-            switch(tipo) {
-                case 'suma':         resultado = num1 + num2; operador = '+'; break;
-                case 'resta':        resultado = num1 - num2; operador = '-'; break;
-                case 'multiplicacion': resultado = num1 * num2; operador = '*'; break;
-                case 'division':
+            switch(type) {
+                case 'add':      result = num1 + num2; operator = '+'; break;
+                case 'subtract': result = num1 - num2; operator = '-'; break;
+                case 'multiply': result = num1 * num2; operator = '*'; break;
+                case 'divide':
                     if (num2 === 0) {
-                        document.getElementById('resultadoCalculadora').innerHTML =
-                            'Resultado: Error, no se puede dividir entre cero.';
+                        document.getElementById('calculatorResult').innerHTML =
+                            'Result: Error, cannot divide by zero.';
                         return;
                     }
-                    resultado = num1 / num2; operador = '/'; break;
+                    result = num1 / num2; operator = '/'; break;
                 default: return;
             }
             
-            document.getElementById('resultadoCalculadora').innerHTML =
-                `Resultado: ${num1} ${operador} ${num2} = ${resultado}`;
+            document.getElementById('calculatorResult').innerHTML =
+                `Result: ${num1} ${operator} ${num2} = ${result}`;
         }
     </script>
 </body>
 </html>
 ```
 
-**Explicación del código:**
+**Code explanation:**
 
-- **Estructura HTML:** Dos contenedores principales: formulario de usuario y calculadora simple.
-- **Estilos CSS:** Fuente, colores, espaciado, bordes redondeados y sombras. Se usa el selector de clase `.formulario-container` para reutilizar estilos.
+- **HTML structure:** Two main containers: a user form and a simple calculator.
+- **CSS styles:** Font, colors, spacing, rounded borders, and shadows. The `.form-container` class selector is used to reuse styles.
 - **JavaScript:**
-  - `mostrarDatos()` — Obtiene los valores con `getElementById()`, los valida y modifica el DOM con `.innerHTML`.
-  - `mostrarAlerta()` — Ejemplo de interacción con `alert()`.
-  - `operacion(tipo)` — Lógica de la calculadora con validaciones (campos vacíos, división por cero).
+  - `showData()` — Gets values with `getElementById()`, validates them, and modifies the DOM with `.innerHTML`.
+  - `showAlert()` — Example of interaction with `alert()`.
+  - `operate(type)` — Calculator logic with validations (empty fields, division by zero).
 
 ---
 
-## PRÓXIMOS PASOS
+## NEXT STEPS
 
-Una vez que hayas completado todos los ejercicios y los proyectos finales, estarás listo para explorar temas más avanzados:
+Once you've completed all the exercises and final projects, you'll be ready to explore more advanced topics:
 
--  **Manejo de archivos** — leer y escribir en disco.
--  **Conexión a bases de datos.**
--  **Frameworks web** — Flask/Django (Python), Spring Boot (Java), React (JavaScript).
--  **Pruebas unitarias** (testing).
--  **Despliegue de aplicaciones** (deploy).
+- **File handling** — reading and writing to disk.
+- **Database connections.**
+- **Web frameworks** — Flask/Django (Python), Spring Boot (Java), React (JavaScript).
+- **Unit testing.**
+- **Application deployment.**
 
 ---
 
-*¡Felicidades por dar el primer paso en tu carrera como desarrollador!* 
+*Congratulations on taking your first step in your career as a developer!*
