@@ -74,7 +74,7 @@ Si ves un número de versión, estás listo. Si no, revisa la instalación.
 Para obtener una copia local de este proyecto en tu ordenador:
 
 ```bash
-git clone https://github.com/ggrauggas/TESTS
+git clone https://github.com/ggrauggas/FIRSTS-STEPS-GUIDE
 ```
 
 Si quieres acceder a cada `[URL-DEL-REPOSITORIO]` la dirección se encuentra en el botón **"Code"** de la página del repositorio en GitHub.
