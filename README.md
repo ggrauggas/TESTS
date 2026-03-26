@@ -74,10 +74,10 @@ Si ves un número de versión, estás listo. Si no, revisa la instalación.
 Para obtener una copia local de este proyecto en tu ordenador:
 
 ```bash
-git clone [URL-DEL-REPOSITORIO]
+git clone https://github.com/ggrauggas/TESTS
 ```
 
-Reemplaza `[URL-DEL-REPOSITORIO]` con la dirección que encuentres en el botón **"Code"** de la página del repositorio en GitHub.
+Si quieres acceder a cada `[URL-DEL-REPOSITORIO]` la dirección se encuentra en el botón **"Code"** de la página del repositorio en GitHub.
 
 ### Gestión de Ramas (Branches)
 
@@ -92,7 +92,7 @@ git checkout -b mi-rama-ejercicios
 **Cambiar entre ramas existentes:**
 
 ```bash
-git checkout main
+git checkout rama-que-quieres-cambiar
 ```
 
 ### Flujo de Trabajo Diario: Añadir, Confirmar y Subir
