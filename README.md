@@ -51,7 +51,7 @@ Una vez instalado VS Code, accede al panel de extensiones (`Ctrl+Shift+X`) e ins
 | Postman | Permite probar APIs directamente desde VS Code. |
 | vscode-icons | Asigna iconos visuales a los diferentes tipos de archivo. |
 
-> **Configuración recomendada:** Para que Prettier formatee al guardar, presiona `Ctrl+,`, busca **"format on save"** y actívalo. Luego, establece Prettier como formateador por defecto.
+> **Configuración recomendada:** Para que Prettier formatee al guardar, en configuración, busca **"format on save"** y actívalo. Luego, establece Prettier como formateador por defecto.
 
 ---
 
@@ -136,12 +136,13 @@ git push origin mi-rama-ejercicios
 > Si es la primera vez que subes esta rama, Git puede pedirte que configures la rama upstream con el comando que te sugiere.
 
 ---
-
-## FUNDAMENTOS DE LA PROGRAMACIÓN
+# FUNDAMENTOS DE LA PROGRAMACIÓN
 
 Antes de escribir una sola línea de código en Python o Java, estos son los conceptos universales que debes dominar. Piensa en ellos como los ladrillos con los que construirás cualquier programa.
 
-### Tipos de Datos
+---
+
+## Tipos de Datos
 
 Los datos que maneja un programa pueden ser de diferentes tipos.
 
@@ -152,11 +153,13 @@ Los datos que maneja un programa pueden ser de diferentes tipos.
 | **Float** (decimal) | Números con punto decimal. | `altura = 1.75` | `double altura = 1.75;` |
 | **Boolean** (booleano) | Valor verdadero o falso. | `es_mayor = True` | `boolean esMayor = true;` |
 
-### Estructuras de Control
+---
+
+## Estructuras de Control
 
 Permiten dirigir el flujo de ejecución del programa.
 
-#### Condicional `if/else`
+### Condicional `if/else`
 
 Ejecuta un bloque de código solo si se cumple una condición.
 
@@ -179,7 +182,7 @@ if (edad >= 18) {
 }
 ```
 
-#### Bucle `for`
+### Bucle `for`
 
 Repite un bloque de código un número determinado de veces.
 
@@ -196,7 +199,7 @@ for (int i = 0; i < 5; i++) {
 }
 ```
 
-#### Bucle `while`
+### Bucle `while`
 
 Repite un bloque de código mientras se cumpla una condición.
 
@@ -217,7 +220,9 @@ while (contador < 5) {
 }
 ```
 
-### Modularidad: Funciones y Métodos
+---
+
+## Modularidad: Funciones y Métodos
 
 Las funciones permiten agrupar un bloque de código que realiza una tarea específica, para poder reutilizarlo.
 
@@ -236,7 +241,7 @@ public class Utilidades {
     public static String saludar(String nombre) {
         return "Hola, " + nombre;
     }
-    
+
     public static void main(String[] args) {
         String mensaje = saludar("Carlos");
         System.out.println(mensaje);  // Salida: Hola, Carlos
@@ -244,7 +249,9 @@ public class Utilidades {
 }
 ```
 
-### Programación Orientada a Objetos (POO)
+---
+
+## Programación Orientada a Objetos (POO)
 
 La POO es un paradigma que organiza el código en "objetos" que contienen datos (**atributos**) y comportamientos (**métodos**).
 
@@ -258,7 +265,7 @@ class Perro:
     def __init__(self, nombre, raza):
         self.nombre = nombre
         self.raza = raza
-    
+
     # Método (comportamiento)
     def ladrar(self):
         return f"{self.nombre} dice: ¡Guau!"
@@ -277,32 +284,242 @@ public class Perro {
     // Atributos (propiedades)
     private String nombre;
     private String raza;
-    
+
     // Constructor
     public Perro(String nombre, String raza) {
         this.nombre = nombre;
         this.raza = raza;
     }
-    
+
     // Método (comportamiento)
     public String ladrar() {
         return this.nombre + " dice: ¡Guau!";
     }
-    
+
     // Getter para acceder al atributo privado
     public String getNombre() {
         return this.nombre;
     }
-    
+
     public static void main(String[] args) {
         Perro miPerro = new Perro("Inka", "Border Collie");
         Perro otroPerro = new Perro("Fosca", "Beagle");
-        
+
         System.out.println(miPerro.ladrar());
         System.out.println(otroPerro.getNombre());
     }
 }
 ```
+
+---
+
+## Arrays, Listas y Matrices
+
+Las colecciones permiten almacenar múltiples valores en una sola variable.
+
+### Arrays (arreglos de tamaño fijo)
+
+En Java los arrays tienen un tamaño fijo que se define al crearlos. En Python no existe un array nativo equivalente: se usan listas (ver siguiente sección).
+
+```python
+# Python - No hay array fijo nativo; se puede simular con la librería array
+import array
+numeros = array.array('i', [10, 20, 30, 40, 50])
+print(numeros[0])   # Salida: 10
+print(len(numeros)) # Salida: 5
+```
+
+```java
+// Java - Array de tamaño fijo
+int[] numeros = {10, 20, 30, 40, 50};
+System.out.println(numeros[0]);        // Salida: 10
+System.out.println(numeros.length);    // Salida: 5
+
+// Declarar primero, rellenar después
+String[] colores = new String[3];
+colores[0] = "rojo";
+colores[1] = "verde";
+colores[2] = "azul";
+```
+
+### Listas (tamaño dinámico)
+
+Las listas pueden crecer o decrecer en tiempo de ejecución.
+
+```python
+# Python - List (la estructura más usada)
+frutas = ["manzana", "banana", "naranja"]
+
+# Agregar elementos
+frutas.append("uva")          # Al final: ["manzana", "banana", "naranja", "uva"]
+frutas.insert(1, "kiwi")      # En posición: ["manzana", "kiwi", "banana", "naranja", "uva"]
+
+# Eliminar elementos
+frutas.remove("banana")       # Por valor
+frutas.pop()                  # Elimina el último
+frutas.pop(0)                 # Elimina por índice
+
+# Acceder y recorrer
+print(frutas[0])              # Primer elemento
+print(frutas[-1])             # Último elemento (atajo de Python)
+print(frutas[1:3])            # Slice: elementos del índice 1 al 2
+
+for fruta in frutas:
+    print(fruta)
+```
+
+```java
+// Java - ArrayList (tamaño dinámico, equivalente a la lista de Python)
+import java.util.ArrayList;
+
+ArrayList<String> frutas = new ArrayList<>();
+
+// Agregar elementos
+frutas.add("manzana");
+frutas.add("banana");
+frutas.add("naranja");
+frutas.add(1, "kiwi");        // Insertar en posición específica
+
+// Eliminar elementos
+frutas.remove("banana");      // Por valor
+frutas.remove(0);             // Por índice
+
+// Acceder y recorrer
+System.out.println(frutas.get(0));       // Primer elemento
+System.out.println(frutas.size());       // Tamaño de la lista
+
+for (String fruta : frutas) {
+    System.out.println(fruta);
+}
+```
+
+### Atajos y operaciones frecuentes con listas
+
+```python
+# Python - Atajos útiles
+
+numeros = [3, 1, 4, 1, 5, 9, 2, 6]
+
+# Ordenar
+numeros.sort()                        # Ordena en el lugar: [1, 1, 2, 3, 4, 5, 6, 9]
+ordenado = sorted(numeros)            # Devuelve nueva lista ordenada
+numeros.sort(reverse=True)            # Orden descendente
+
+# Buscar
+print(3 in numeros)                   # True/False → comprobar si existe
+print(numeros.index(4))               # Índice del primer 4
+print(numeros.count(1))               # Cuántas veces aparece el 1
+
+# Estadísticas rápidas
+print(min(numeros))                   # Valor mínimo
+print(max(numeros))                   # Valor máximo
+print(sum(numeros))                   # Suma total
+print(len(numeros))                   # Número de elementos
+
+# List comprehension (crear listas en una línea)
+cuadrados = [x**2 for x in range(1, 6)]     # [1, 4, 9, 16, 25]
+pares = [x for x in numeros if x % 2 == 0]  # Solo los pares
+
+# Copiar una lista (no usar lista2 = lista1, eso no copia)
+copia = numeros.copy()
+copia = numeros[:]                    # Alternativa con slice
+
+# Combinar listas
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = a + b                             # [1, 2, 3, 4, 5, 6]
+a.extend(b)                           # Agrega b al final de a
+```
+
+```java
+// Java - Atajos útiles con ArrayList y Arrays
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
+ArrayList<Integer> numeros = new ArrayList<>(Arrays.asList(3, 1, 4, 1, 5, 9, 2, 6));
+
+// Ordenar
+Collections.sort(numeros);                        // Orden ascendente
+Collections.sort(numeros, Collections.reverseOrder()); // Orden descendente
+
+// Buscar
+System.out.println(numeros.contains(3));          // true/false
+System.out.println(numeros.indexOf(4));           // Índice del primer 4
+System.out.println(Collections.frequency(numeros, 1)); // Cuántas veces aparece 1
+
+// Estadísticas
+System.out.println(Collections.min(numeros));     // Valor mínimo
+System.out.println(Collections.max(numeros));     // Valor máximo
+
+// Copiar
+ArrayList<Integer> copia = new ArrayList<>(numeros);
+
+// Combinar listas
+ArrayList<Integer> a = new ArrayList<>(Arrays.asList(1, 2, 3));
+ArrayList<Integer> b = new ArrayList<>(Arrays.asList(4, 5, 6));
+a.addAll(b);  // Agrega b al final de a
+```
+
+### Matrices (listas de listas / arrays 2D)
+
+Una matriz es una tabla de filas y columnas. Se implementa como una lista de listas.
+
+```python
+# Python - Matriz 3x3
+matriz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+# Acceder a un elemento: matriz[fila][columna]
+print(matriz[0][0])   # Salida: 1  → fila 0, columna 0
+print(matriz[1][2])   # Salida: 6  → fila 1, columna 2
+
+# Recorrer toda la matriz
+for fila in matriz:
+    for elemento in fila:
+        print(elemento, end=" ")
+    print()  # Salto de línea al terminar cada fila
+
+# Crear una matriz vacía de 3x3 con ceros
+filas, columnas = 3, 3
+vacia = [[0] * columnas for _ in range(filas)]
+```
+
+```java
+// Java - Matriz 3x3 (array 2D)
+int[][] matriz = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
+
+// Acceder a un elemento: matriz[fila][columna]
+System.out.println(matriz[0][0]);   // Salida: 1
+System.out.println(matriz[1][2]);   // Salida: 6
+
+// Recorrer toda la matriz
+for (int i = 0; i < matriz.length; i++) {
+    for (int j = 0; j < matriz[i].length; j++) {
+        System.out.print(matriz[i][j] + " ");
+    }
+    System.out.println();  // Salto de línea al terminar cada fila
+}
+
+// Crear una matriz vacía de 3x3 con ceros
+int[][] vacia = new int[3][3];  // Java la inicializa a 0 automáticamente
+```
+
+### Comparativa rápida: ¿cuándo usar cada estructura?
+
+| Estructura | Python | Java | Cuándo usarla |
+|---|---|---|---|
+| **Array fijo** | `array.array` | `int[]` | Tamaño conocido, rendimiento máximo |
+| **Lista dinámica** | `list` | `ArrayList` | Tamaño variable, uso general |
+| **Matriz 2D** | `list` de `list` | `int[][]` | Tablas, cuadrículas, imágenes |
 
 ---
 
